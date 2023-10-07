@@ -3,9 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tribute Page</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        div {
+            margin: 10px;
+            padding: 10px;
+        }
+        div:hover {
+            background-color: rgb(236, 236, 236);
+        }
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .div1, .div2, .div3, .div4, .div5, .div6{
+            margin: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+            /* border: 1px solid black; */
+            text-align: center;
+        }
+        h1:hover {
+            color: gray;
+        }
+        .header {
+            list-style-type: none;
+            overflow: hidden;
+            background-color: #3f3939;
+        }
+        .header li, .footer li{
+            float: left;
+        }
+        .header li a{
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 16px;
+            text-decoration: none;
+        }
+        .header li a:hover {
+            background-color: #516a87;
+        }
+        .footer {
+            list-style-type: none;
+            padding: 10px;
+        }
+        .footer li a {
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+
 </head>
 <body>
+    <div class="div1">
+        <h1 title="The Creator of Linux">Linus Torvalds</h1>
+        <h3>The Creator of Linux</h3>
+        <a href="https://en.wikipedia.org/wiki/Linus_Torvalds">
+            <figure>
+                <img src="Linus Torvalds.jpeg" 
+                    alt="Linus Torvalds Photo"
+                    height="350px">
+                <figcaption style="color: black; font-style: italic;">Photograph of Linus Torvalds</figcaption>
+            </figure>
+        </a>
+
+    </div>
+
+    <div class="div2">
+        <!-- <h3>Navigate To</h3> -->
+        <ul class="header">
+            <li><a href="#Resorces">Resorces</a></li>
+            <li><a href="#AAA">Awards and achievements</a></li>
+            <li><a href="#PersonalLife">Personal life</a></li>
+        </ul>
+    </div>
+
+    <div class="div3">
+        <h3>Biography</h3>
+        <p>
+            Linus Torvalds is a Finnish-American software engineer and the creator of the Linux kernel, which is the core component of the Linux operating system. He was born on December 28, 1969, in Helsinki, Finland. Torvalds started developing the Linux kernel in 1991 while he was a student at the University of Helsinki. He released the initial version of the kernel to the public and continued to work on its development, collaborating with other developers around the world.
+        </p>
+        <p>
+            Linus Torvalds is also known for his role as the maintainer of the Linux kernel, overseeing its development and making decisions about which contributions to accept into the official kernel source tree. He has been involved in various open-source and software development communities and is considered one of the most influential figures in the world of free and open-source software.
+        </p>
+    </div>
+
+    <div class="div4" id="PersonalLife">
+        <h3>Personal life</h3>
+        Torvalds is married to Tove Torvalds (née Monni), a six-time Finnish national karate champion, whom he met in late 1993. He was running introductory computer laboratory exercises for students and instructed the course attendees to send him an e-mail as a test, to which Tove responded with an e-mail asking for a date. They were later married and have three daughters, two of whom were born in the United States. The Linux kernel's reboot system call accepts their dates of birth (written in hexadecimal) as magic values.
+    </div>
+
+    <div class="div5">
+        <h3>Linux</h3>
+        <p>The first Linux prototypes were publicly released in late 1991. Version 1.0 was released on 14 March 1994.</p>
+        <p>Torvalds first encountered the GNU Project in fall of 1991 when another Swedish-speaking computer science student, Lars Wirzenius, took him to the University of Technology to listen to free software guru Richard Stallman's speech. Torvalds would ultimately switch his original license (which forbade commercial use) to Stallman's GNU General Public License version 2 (GPLv2) for his Linux kernel after complaints of distributors being unable to recoup their costs due to a non-commercial clause.</p>
+    </div>
+
+    <div class="div6">
+        <h3>Other software</h3>
+        <h4>Git</h4>
+        <p>On 3 April 2005, Torvalds began development on Git, version control software that later became widely used. On 26 July 2005, he turned over Git's maintenance to Junio Hamano, a major project contributor.</p>
+        <h4>Subsurface</h4>
+        <p>Subsurface is software for logging and planning scuba dives, which Torvalds began developing in late 2011. It is free and open-source software distributed under the terms of the GNU General Public License version 2. Dirk Hohndel became its head maintainer in late 2012.</p>
+    </div>
+
+    <div class="div7" id="AAA">
+        <h3>Awards & Achievements</h3>
+        <ul>
+            <li><b>1991 - </b>Created the Linux Kernel and the version control system Git.</li>
+            <li><b>2004 - </b>Named one of the most influential people in the world by Time magazine.</li>
+            <li><b>2010 - </b>Awarded the C&C Prize by the NEC Corporation in 2010 for "contributions to the advancement of the information technology industry, education, research, and the improvement of our lives".</li>
+            <li><b>2014 - </b>The Institute of Electrical and Electronics Engineers named Torvalds as the 2014 recipient of the IEEE Computer Society's Computer Pioneer Award.</li>
+        </ul>
+    </div>
     
+    <div class="div8" id="Resorces">
+        <h3>Resorces</h3>
+        <p>Learn more about Linus Torvalds and his work:</p>
+        <ul>
+            <li>
+                <a href="https://en.wikipedia.org/wiki/Linus_Torvalds" target="_blank">
+                    Wikipedia page on Linus Torvalds
+                </a>
+            </li>
+            <li>
+                <a href="https://linustorvaldslinux.weebly.com/" target="_blank">
+                    Linus Torvalds personal website
+                </a>
+            </li>
+
+        </ul>
+    </div>
+
+    <hr>
+    <div class="footer">
+        <ul class="footer">
+            <li><a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">Privacy Policy</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Wikipedia:About">About Wikipedia</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Wikipedia:General_disclaimer">Disclamers</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+        </ul>
+    </div>
+
 </body>
 </html>
