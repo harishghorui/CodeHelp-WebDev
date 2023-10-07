@@ -6,28 +6,62 @@
     <title>Card</title>
 
     <style>
-        div {
-            height: 300px;
-            width: 400px;
-            margin: 10px;
-            border: 100px;
-            background-color: aqua;
-            color: brown;
+        html {
+            font-family: Arial, Helvetica, sans-serif;
         }
-
-        .card :hover {
-            background-color :black ;
+        div {
+            box-sizing: border-box;
+            width: 450px;
+        }
+        div a {
+            text-align: center;
+        }
+        .card1 {
+            /* box-shadow: 10px 10px; */
+            margin: 10px;
+            border: 1px solid rgb(176, 176, 176);
+            border-radius: 10px;
+            padding: 10px;
+            padding-bottom: 5px;
+        }
+        #price-list li {
+            float: left;
+            padding: 10px;
+            list-style-type: none;
+        }
+        hr {
+            width: 80%;
+            text-align: left;
+            margin-left: 10px;
+            color: rgb(255, 255, 255);
+        }
+        #thumbnail {
+            text-align: center;
+            border-radius: 10px;
+        }
+        .card1:hover {
+            box-shadow: 10px 10px 50px 10px rgb(222, 222, 222);
         }
     </style>
 </head>
 <body>
-    
-    <div class="card">
-        <p>sdsdvsdvsdvv</p>
+    <div>
         <a href="https:www.google.com">
-            <img src="Thumbnail.jpg" alt="Thumbnail" height="200px">
-            <br>
-            WEB DEV
+            <div class="card1">
+                <img id="thumbnail" src="Thumbnail.jpg"; alt="Thumbnail"; width="400px";>
+                <br>
+                <h2 style="color: black;">Web Development Master Course @dot Batch</h2>
+                <hr>
+                <!-- <p>₹4500 <s>₹6999</s></p> -->
+                <ul id="price-list">
+                    <li style="font-size: large; font-weight: bold; color: rgb(77, 77, 206);">₹4500</li>
+                    <li style="font-size: large; font-weight: bold; color: rgb(98, 92, 92);"><s>₹6999</s></li>
+                    <button type="button" disabled style="background-color: rgb(12, 197, 111); color: white;">
+                        <li style="font-size: large; font-weight: bold;">42% off</li>
+                    </button>
+                </ul>
+                
+            </div>
         </a>
         
     </div>
