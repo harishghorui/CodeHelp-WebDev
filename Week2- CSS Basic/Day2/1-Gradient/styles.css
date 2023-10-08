@@ -1,0 +1,26 @@
+div {
+    border: 1px solid black;
+    height: 200px;
+    width: 500px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.linear {
+    background-image: linear-gradient(red,blue);
+    background-image: linear-gradient(red,blue,green);
+    background-image: linear-gradient(to left, red,blue);
+    background-image: linear-gradient(to right, red,blue);
+    background-image: linear-gradient(to bottom left, red,blue);
+    background-image: linear-gradient(120deg, red,blue);
+    background-image: linear-gradient(to bottom,rgba(170, 205, 18, 1),rgba(15, 15, 231, 0));
+}
+
+.radial {
+    background-image: radial-gradient(red,green,blue);
+    background-image: radial-gradient(red 5%,green 10%, blue 50%);
+}
+
+.conic {
+    background-image: conic-gradient(red,blue,black,red);
+}

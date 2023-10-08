@@ -1,0 +1,41 @@
+.div1 {
+    background-color: gray;
+    width: 200px;
+    /* transform: translateX(50px);
+    transform: translateY(200px); */
+    transform: translate(100px, 50px);
+    /* Position of element can be dicide */
+}
+
+.div2 {
+    background-color: rgb(219, 29, 29);
+    width: 200px;
+    transform: rotate(-10deg);
+    /* transform: rotate(10deg); */
+}
+
+.div3 {
+    background-color: rgb(35, 167, 203);
+    width: 200px;
+    margin: 100px;
+    transform: scale(2,5);
+    /* we can strech the height/width */
+}
+
+.div4 {
+    background-color: gray;
+    width: 100px;
+    height: 50px;
+    margin: 100px;
+    transform: skew(45deg);
+    transform: skew(-45deg);
+}
+
+.div5 {
+    background-color: gray;
+    width: 100px;
+    height: 50px;
+    margin: 100px;
+    transform: matrix(1, 0, 0.5, 1, 150, 0);
+    /* this is a combination of all 2d transforms */
+}

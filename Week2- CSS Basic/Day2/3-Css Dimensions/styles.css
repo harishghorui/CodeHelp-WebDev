@@ -1,0 +1,13 @@
+.div1 {
+    border: 1px solid black;
+    max-height: 100px;
+    margin: 10px;
+    padding: 10px;
+    overflow: scroll;
+}
+
+.div2 {
+    border: 1px solid black;
+    margin: 10px;
+    min-height: 100px;
+}
