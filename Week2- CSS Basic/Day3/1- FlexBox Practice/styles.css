@@ -1,0 +1,61 @@
+.container {
+    margin: 5px;
+    border: 1px solid green;
+    height: 300px;
+    /* as flex direction is main-axis(horizontal) by-default */
+    display: flex;
+    /* changed by-default to column */
+    flex-direction: column;
+    /* again changed to horizontal */
+    flex-direction: row;
+    flex-direction: row-reverse;
+    flex-direction: column-reverse;
+
+    /* to intact width of elements */
+    /* flex-wrap: wrap; */
+
+    justify-content: space-evenly;
+
+    align-content: flex-start;
+}
+
+.box {
+    border: 1px solid blue;
+    background-color: greenyellow;
+    width: 50px;
+}
+
+.container2 {
+    margin: 5px;
+    border: 1px solid black;
+    height: 300px;
+    display: flex;
+
+    /* to work with cross-axis align-item property is used */
+    align-items: flex-start;
+    align-items: flex-end;
+    align-items: stretch;
+    align-items: center;
+
+    justify-content: center;
+
+    /* gap: 10px; */
+}
+
+#box1 {
+    order: 1;
+    flex-grow: 2;
+    flex-shrink: 1;
+    align-self: stretch;
+}
+
+#box4 {
+    order: 8;
+    flex-grow: 1;
+    align-self: flex-start;
+}
+
+#box2 {
+    order: 3;
+    align-self: flex-end;
+}
