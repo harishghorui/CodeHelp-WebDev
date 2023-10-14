@@ -1,0 +1,31 @@
+.container {
+    background-color: saddlebrown;
+    border: 2px solid;
+    height: 500px;
+    display: grid;
+
+    /* to add column & rows */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.box {
+    background-color: sandybrown;
+    border: 1px solid;
+    /* height: 50px; */
+    /* width: 50px; */
+}
+
+/* to span a cell/grid-item to some extent */
+#box1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+}
+
+#box3 {
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
