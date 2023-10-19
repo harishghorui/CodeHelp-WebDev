@@ -1,0 +1,48 @@
+.container {
+    border: 1px solid red;
+    height: 700px;
+    background-color: rgb(161, 99, 161);
+
+    display: grid;
+    gap: 3px;
+
+    /* creating templates- Layout1 */
+    /* grid-template-rows: 30px 150px 400px 30px;
+    grid-template-columns: 400px;
+
+    grid-template-areas: 
+    "hd"
+    "side"
+    "main"
+    "ft"; */
+
+    /* creating templates- Layout2 */
+    grid-template-rows: 30px 500px 30px; 
+    grid-template-columns: 200px 400px;
+
+    grid-template-areas: 
+    "hd hd"
+    "side main"
+    "ft ft";
+}
+
+.boxes {
+    border: 1px solid;
+    background-color: thistle;
+}
+
+#header {
+    grid-area: hd;
+}
+
+#sidebar {
+    grid-area: side;
+}
+
+#content {
+    grid-area: main;
+}
+
+#footer {
+    grid-area: ft;
+}
