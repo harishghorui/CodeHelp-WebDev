@@ -1,0 +1,59 @@
+.container {
+    border: 1px solid red;
+    height: 700px;
+    background-color: rgb(161, 99, 161);
+
+    display: grid;
+    gap: 3px;
+
+    grid-template-rows: 100px 100px;
+    grid-template-columns: 100px 100px 100px;
+
+    /* justify-content: start;
+    justify-content: end;
+    justify-content: center;
+    justify-content: space-around;
+    justify-content: space-between;
+    justify-content: space-evenly; */
+
+
+    /* align-items: start;
+    align-items: end;
+    align-items: baseline;
+    align-items: stretch; */
+
+
+    /* align-content: center;
+    align-content: space-evenly; */
+
+
+    /* justify-content: center;
+    align-content: center; */
+    /* short-hand for above code */
+    /* place-content: center; */
+
+
+    /* justify-items: center;
+    align-items: center; */
+    /* short-hand for above code */
+    /* place-items: center; */
+}
+
+.boxes {
+    border: 1px solid;
+    background-color: thistle;
+    /* height: 50px;
+    width: 50px; */
+}
+
+#box1 {
+    /* justify-self: start;
+    justify-self: end;
+    justify-self: center;
+    justify-self: stretch; */
+
+    /* align-self: start;
+    align-self: end;
+    align-self: center;
+    align-self: stretch; */
+}

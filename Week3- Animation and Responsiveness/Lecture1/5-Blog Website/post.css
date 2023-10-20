@@ -1,0 +1,38 @@
+.container {
+    border: 1px solid;
+    height: 700px;
+    background-color: violet;
+
+    display: grid;
+    gap: 5px;
+
+    grid-template-rows: 30px 300px 300px 30px;
+    grid-template-columns: 600px;
+
+    grid-template-areas: 
+    "hd"
+    "side"
+    "main"
+    "ft";
+}
+
+.boxes {
+    border: 1px solid;
+    background-color: rgb(235, 60, 235);
+}
+
+#header {
+    grid-area: hd;
+}
+
+#sidebar {
+    grid-area: side;
+}
+
+#content {
+    grid-area: main;
+}
+
+#footer {
+    grid-area: ft;
+}
