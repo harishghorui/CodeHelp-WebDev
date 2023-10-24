@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container img {
+    max-width: 100%;
+    margin: 3rem;
+}
+
+.wrapper {
+    /* height: 100vh; */
+    margin-top: 0rem;
+    padding-top: 0rem;
+    flex-wrap: wrap;
+    background-color: #F3F4F6;
+}
+
+.container {
+    max-width: 100%;
+    /* margin-top: 3rem; */
+    margin-top: 1rem;
+    margin-right: 5rem;
+    margin-left: 6rem;
+    display: grid;
+
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 0.6fr repeat(2, 2fr);
+
+    margin-bottom: 5rem;
+}
+
+.header {
+    display: grid;
+
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+}
+
+.title {
+    /* flex-grow: 1; */
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+
+    text-align: center;
+    /* color: #777C85; */
+    font-family: Raleway;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.25rem;
+}
+
+.title .team {
+    padding: 5px;
+    border-bottom: 1px solid;
+    color: #4E5DC0;
+}
+
+.title a {
+    color: #777C85;
+}
+
+.btn1 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn1 button {
+    background-color: #4E5DC0;
+    color: #FFF;
+    width: 10.3rem;
+    height: 3.3rem;
+    border-radius: 0.3rem;
+    border: none;
+    font-family: Raleway;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.content1, .content2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: start;
+    align-items: start;
+}
+
+.teamcodehelp, .founder {
+    margin: 3rem;
+    color: #16171C;
+    font-family: Roboto Flex;
+    font-size: 2.375rem;
+}
+
+.text1, .text2 {
+    margin: 3rem;
+    color: #000;
+    font-family: Raleway;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2.125rem;
+    opacity: 0.5;
+}
+
+.hr_title {
+    margin: 3rem;
+    width: 40%;
+    height: 2.3px;
+    background-color: rgba(0, 0, 0, 0.50);
+}
+
+.footer {
+    max-width: 100%;
+    background-color: #FFF;
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: start;
+    padding: 5rem;
+
+    /* align-items: start; */
+    /* align-content: space-around; */
+
+}
+
+.footer img {
+    padding-bottom: 2rem;
+}
+
+.footer h4 {
+    color: #4E5DC0;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Raleway;
+    /* font-size: 1rem; */
+    font-weight: 700;
+    line-height: 2rem; /* 200% */
+    letter-spacing: 0.1875rem;
+}
+
+.footer p {
+    color: #999;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Manrope;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2rem; /* 200% */
+}
