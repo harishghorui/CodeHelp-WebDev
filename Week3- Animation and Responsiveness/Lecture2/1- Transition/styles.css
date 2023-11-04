@@ -1,0 +1,44 @@
+:root{
+    --container-color: rgb(0,255,255);
+}
+
+.container {
+    border: 2px solid orangered;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--container-color);
+    display: flex;
+}
+
+.box {
+    margin: 50px;
+    height: 150px;
+    width: 150px;
+    border: 2px solid orange;
+    background-color: teal;
+
+    /* Transition Properties--->>> */
+    /* transition-property: background-color;
+    transition-delay: 2s;
+    transition-duration: 3s;
+    transition-timing-function: ease-in; */
+
+    /* shorthand */
+    /* transition: background-color 2s ease-in 1s; */
+    /* transition: transform 3s ease-out; */
+    transition: transform 3s 1s cubic-bezier(0.06, 1.5, 0.63, 1.68);
+    /* 
+        to create custom fun like this 
+        inspect the page, select the box in element
+        in styles you will find purple box in transition
+        click on it, create custom transition, copy & paste
+     */
+    
+
+}
+
+.box:hover {
+    /* background-color: yellowgreen; */
+    /* transform: translateX(450px); */
+    transform: scale(1.2) translateX(400px) rotate(360deg);
+}
