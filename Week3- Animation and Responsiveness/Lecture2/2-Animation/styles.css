@@ -1,0 +1,51 @@
+.container {
+    border: 2px solid red;
+    background-color: aqua;
+    width: 100%;
+    height: 200px;
+}
+
+.box {
+    margin: 2px;
+    padding: 10px;
+    height: 172px;
+    width: 150px;
+    border: 2px solid;
+    background-color: tomato;
+
+    animation-name: harish;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-iteration-count: 5;
+    animation-direction: alternate;
+}
+
+/* Creating animation */
+/* @keyframes harish {
+    from {
+        width: 150px;
+    }
+    to {
+        width: 600px;
+    }
+} */
+
+@keyframes harish {
+    0% {
+        width: 150px;
+    }
+
+    30% {
+        width: 30%;
+        background-color: sandybrown;
+    }
+    60% {
+        width: 60%;
+        background-color: violet;
+    }
+    100% {
+        width: 97%;
+        background-color: blueviolet;
+    }
+}
