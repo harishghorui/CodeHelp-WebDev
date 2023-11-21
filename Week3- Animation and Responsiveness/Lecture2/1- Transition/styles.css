@@ -28,7 +28,7 @@
     /* transition: transform 3s ease-out; */
     transition: transform 3s 1s cubic-bezier(0.06, 1.5, 0.63, 1.68);
     /* 
-        to create custom fun like this 
+        to create custom func(cubic-bezier) like this 
         inspect the page, select the box in element
         in styles you will find purple box in transition
         click on it, create custom transition, copy & paste
