@@ -1,7 +1,7 @@
 {
-  "name": "html-tailwind-css-starter-pack",
+  "name": "tailwind_demo",
   "version": "1.0.0",
-  "description": "",
+  "description": "**Step 1:** [Download](https://github.com/thepranaygupta/html-tailwind-css-starter-pack/archive/refs/heads/main.zip) this repo as a zip",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -22,6 +22,6 @@
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.2.4",
-    "vite": "^4.0.4"
+    "vite": "^4.5.1"
   }
 }
