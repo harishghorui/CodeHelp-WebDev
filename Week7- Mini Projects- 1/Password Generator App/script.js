@@ -20,14 +20,22 @@ let lengthCount = 0;
 // set password length
 handleSlider();
 
+// set strength circle color to grey
+setIndicator("#ccc") 
+
 function handleSlider() {
     inputSlider.value = passwordLength;
     lengthDisplay.innerText = passwordLength;
+    // handling color filled in slider
+    const min = inputSlider.min;
+    const max = inputSlider.max;
+    inputSlider.style.backgroundSize = ( (passwordLength-min)*100 / (max-min)) + "% 100%"; //eg- "50% 100%" i.e- "width height"
 }
 
 function setIndicator(color) {
     indicator.style.backgroundColor = color;
     // shadow
+    indicator.style.boxShadow = '0px 0px 12px 1px ${color}';
 }
 
 // gets random number from min to max (eg: 1-9)
@@ -79,11 +87,11 @@ function calcStrength() {
 
 async function copyContent() {
     try{
-        await navigator.clipboard.writeText(copyBtn.value);
-        copyMsg.innerText("Copied");
+        await navigator.clipboard.writeText(passwordDisplay.value);
+        copyMsg.innerText = "Copied";
     }
     catch(e) {
-        copyMsg.innerText("Failed");
+        copyMsg.innerText = "Failed";
     }
     
     // to make copy wala span visible
