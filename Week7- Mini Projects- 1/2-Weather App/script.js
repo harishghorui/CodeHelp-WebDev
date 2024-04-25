@@ -14,15 +14,17 @@ let API_KEY = "64bfa4d5e6ff5599bb575f2c76f89588";
 currentTab.classList.add("current-tab");
 getfromSessionStorage();
 
+// Function to switch between user and search tabs
 function switchTab(clickedTab) {
 
+    // Checking if clickedTab is different from currentTab
     if(clickedTab != currentTab) {
-        // tab focus
+        // Changing tab focus
         currentTab.classList.remove("current-tab");
         currentTab = clickedTab;
         currentTab.classList.add("current-tab");
         
-        // 
+        // Toggling visibility of containers based on tab switch
         if(!searchForm.classList.contains("active")) {
             userInfoContainer.classList.remove("active");
             grantAccessContainer.classList.remove("active");
@@ -37,6 +39,7 @@ function switchTab(clickedTab) {
     }
 }
 
+// Adding event listeners for tab clicks
 userTab.addEventListener("click", () => {
     switchTab(userTab);
 });
@@ -45,9 +48,13 @@ searchTab.addEventListener("click", () => {
     switchTab(searchTab);
 });
 
+// Function to retrieve user location from session storage
 function getfromSessionStorage() {
     const localCoordinates = sessionStorage.getItem("user-coordinates");
+
+    // Checking if user coordinates are not stored
     if(!localCoordinates) {
+        // Displaying grant access container
         grantAccessContainer.classList.add("active");
     }
     else {
@@ -56,7 +63,10 @@ function getfromSessionStorage() {
     }
 }
 
+// Function to fetch user weather info
 async function fetchUserWeatherInfo(coordinates) {
+
+    // Extracting latitude and longitude from coordinates
     const {lat, lon} = coordinates;
     grantAccessContainer.classList.remove("active");
     loadingScreen.classList.add("active");
@@ -72,14 +82,15 @@ async function fetchUserWeatherInfo(coordinates) {
         renderWeatherInfo(data);
     }
     catch(err) {
-        loadingScreen.classList.remove("active");
         // error handling
-
+        loadingScreen.classList.remove("active");
+        
     }
 }
 
+// Function to render weather information on UI
 function renderWeatherInfo(weatherInfo) {
-    // firstly fetch elements
+    // Fetching UI elements
     const cityName = document.querySelector("[data-cityName]");
     const countryIcon = document.querySelector("[data-countryIcon]");
     const desc = document.querySelector("[data-weatherDesc]");
@@ -89,7 +100,7 @@ function renderWeatherInfo(weatherInfo) {
     const humidity = document.querySelector("[data-humidity]");
     const cloudiness = document.querySelector("[data-cloudiness]");
 
-    // fetch values from weatherInfo object and set to UI elements
+    // Updating UI elements with weather data
     cityName.innerText = weatherInfo?.name;
     countryIcon.src = `https://flagcdn.com/144x108/${weatherInfo?.sys?.country.toLowerCase()}.png`;
     desc.innerText = weatherInfo?.weather?.[0]?.description;
@@ -100,7 +111,10 @@ function renderWeatherInfo(weatherInfo) {
     cloudiness.innerText = `${weatherInfo?.clouds?.all}%`;
 }
 
+// Function to get user location
 function getLocation() {
+
+    // Checking if geolocation is supported by the browser
     if(navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
     }
@@ -109,6 +123,7 @@ function getLocation() {
     }
 }
 
+// Function to handle user position retrieval
 function showPosition(position) {
     const userCoordinates = {
         lat: position.coords.latitude,
@@ -118,11 +133,12 @@ function showPosition(position) {
     fetchUserWeatherInfo(userCoordinates);
 }
 
+// Event listener for grant access button click
 const grantAccessButton = document.querySelector("[data-grantAccess]");
 grantAccessButton.addEventListener("click" , getLocation);
 
+// Search form submission event listener
 const searchInput = document.querySelector("[data-searchInput]");
-
 searchForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -133,7 +149,10 @@ searchForm.addEventListener("submit", (e) => {
     fetchSearchWeatherInfo(cityName);
 })
 
+// Function to fetch weather info for searched city
 async function fetchSearchWeatherInfo(city) {
+
+    // Showing loading screen and hiding other containers
     loadingScreen.classList.add("active");
     userInfoContainer.classList.remove("active");
     grantAccessContainer.classList.remove("active");
@@ -143,7 +162,7 @@ async function fetchSearchWeatherInfo(city) {
         const response = await fetch(
             `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
         );
-        // if city not found throw error
+        // If city not found, throw error
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
@@ -159,6 +178,7 @@ async function fetchSearchWeatherInfo(city) {
     }
 }
 
+// Function to handle city not found error
 const notFound = document.querySelector(".city-not-found");
 function cityNotFound() {
     loadingScreen.classList.remove("active");
