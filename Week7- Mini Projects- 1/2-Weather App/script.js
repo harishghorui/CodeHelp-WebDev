@@ -31,6 +31,7 @@ function switchTab(clickedTab) {
         else {
             searchForm.classList.remove("active")
             userInfoContainer.classList.remove("active")
+            notFound.classList.remove("active");
             getfromSessionStorage();
         }
     }
@@ -73,6 +74,7 @@ async function fetchUserWeatherInfo(coordinates) {
     catch(err) {
         loadingScreen.classList.remove("active");
         // error handling
+
     }
 }
 
@@ -135,17 +137,31 @@ async function fetchSearchWeatherInfo(city) {
     loadingScreen.classList.add("active");
     userInfoContainer.classList.remove("active");
     grantAccessContainer.classList.remove("active");
+    notFound.classList.remove("active");
 
     try {
         const response = await fetch(
             `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
         );
+        // if city not found throw error
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+
         const data = await response.json();
         loadingScreen.classList.remove("active");
         userInfoContainer.classList.add("active");
         renderWeatherInfo(data);
+        searchInput.value = "";
     }
-    catch (err) {
-        // err handle
+    catch (error) {
+        cityNotFound();
     }
+}
+
+const notFound = document.querySelector(".city-not-found");
+function cityNotFound() {
+    loadingScreen.classList.remove("active");
+    notFound.classList.add("active");
+    searchInput.value = "";
 }

@@ -1,6 +1,4 @@
-*,
-*::after,
-*::before {
+*,*::before,*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -15,6 +13,8 @@
 }
 
 .wrapper {
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
     width:100vw;
     height:100vh;
     color: var(--colorLight2);
@@ -164,7 +164,6 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 5px 0;
-    /* justify-content: center; */
     align-items: center;
 }
 
@@ -226,23 +225,29 @@ h1 {
     margin-bottom: 1px;
 }
 
+.city-not-found {
+    display: none;
+}
 
+.city-not-found.active {
+    display: flex;
+}
 
+.city-not-found img {
+    max-width: 20%;
+}
 
+/* Media Queries */
+@media only screen and (max-width: 770px) {
+    .parameter-container {
+        flex-direction: column;
+    }
+    
+    .parameter {
+        width: 100%;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .city-not-found img {
+        max-width: 90%;
+    }
+}
