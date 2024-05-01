@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        
+        <div class="container">
+
+            <div class="header">
+                <h1>DevDetective</h1>
+
+                <button class="theme-btn" data-theme>
+
+                    <span class="light" data-light>
+                        <p>light</p>
+                        <i class="fas fa-sun"></i>
+                    </span>
+
+                    <span class="dark" data-dark>
+                        <p>dark</p>
+                        <i class="fas fa-moon"></i>
+                    </span>
+
+                </button>
+            </div>
+
+            <form class="search-container" data-searchTab>
+
+                <input type="search" placeholder="Enter a Github Username..." id="input" data-user-input>
+
+                <p class="no-search-result" data-no-result>no search result</p>
+
+                <button>Search</button>
+            </form>
+
+            <div class="user-info-container" data-user-container>
+
+                <div class="user-avatar-section">
+                    <img data-avatar>
+                    
+                    <div class="user-info">
+                        <div class="profile-header-1">
+                            <div>
+                                <p class="header-username" data-name></p>
+                                <a class="github-link" target="_blank" data-username></a>
+                            </div>
+
+                            <p data-joined></p>
+                        </div>
+                        
+                        <p class="user-bio" data-bio></p>
+
+                        <div class="profile-stats-wrapper" data-social-numbers>
+                            <div class="profile-stat">
+
+                                <p class="stat-title">Repos</p>
+
+                                <p class="stat-value" data-repos></p>
+                            </div>
+
+                            <div class="profile-stat">
+
+                                <p class="stat-title">Followers</p>
+
+                                <p class="stat-value" data-followers></p>
+                            </div>
+
+                            <div class="profile-stat">
+
+                                <p class="stat-title">Following</p>
+
+                                <p class="stat-value" data-following></p>
+                            </div>
+                        </div>
+    
+                        <div class="profile-bottom-wrapper">
+    
+                            <div class="profile-info">
+                                <div class="bottom-icons"><img src="./assets/images/location-icon.svg" alt=""></div>
+                                <p id="location" data-location></p>
+                            </div>
+    
+                            <div class="profile-info">
+                                <div class="bottom-icons"><img src="./assets/images/website-icon.svg" alt=""></div>
+                                <a id="page" target="_blank" data-blog></a>
+                            </div>
+    
+                            <div class="profile-info">
+                                <div class="bottom-icons"><img src="./assets/images/twitter-icon.svg" alt=""></div>
+                                <a id="twitter" target="_blank" data-twitter></a>
+                            </div>
+    
+                            <div class="profile-info">
+                                <div class="bottom-icons"><img src="./assets/images/company-icon.svg" alt=""></div>
+                                <p id="company" data-company></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+
+</html>
