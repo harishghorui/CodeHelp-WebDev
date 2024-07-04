@@ -1,5 +1,6 @@
 import React from 'react'
 import Testimonials from './components/Testimonials.js'
+import reviews from './data.js';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
 
       <div></div>
 
-      <Testimonials/>
+      <Testimonials reviews={reviews}/>
 
     </div>
   );
