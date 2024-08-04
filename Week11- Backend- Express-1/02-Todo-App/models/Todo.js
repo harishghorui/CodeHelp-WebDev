@@ -1,26 +1,27 @@
+
 const mongoose = require("mongoose");
 
 const todoSchema = new mongoose.Schema(
     {
-        title:{
+        title: {
             type:String,
             required:true,
             maxLength:50,
         },
-        description:{
+        description: {
             type:String,
             required:true,
-            maxLength:50,
+            maxLength:50
         },
-        createdAt:{
+        createdAt: {
             type:Date,
             required:true,
-            default:Date.now(),
+            default:Date.now()
         },
-        updatedAt:{
+        updatedAt: {
             type:Date,
             required:true,
-            default:Date.now(),
+            default:Date.now()
         }
     }
 )
