@@ -6,6 +6,9 @@ const PORT = process.env.PORT || 4000;
 
 app.use(express.json());
 
+const cookieParser = require('cookie-parser');
+app.use(cookieParser());
+
 const user = require('./src/routes/user.router');
 app.use('/api/v1', user);
 
